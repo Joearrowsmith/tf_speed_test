@@ -1,0 +1,1 @@
+docker run -it --shm-size=256m --gpus=all -u $(id -u):$(id -g) --ipc=host -e HOST_HOSTNAME=$HOSTNAME -e TF_FORCE_GPU_ALLOW_GROWTH=true -e LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH --name tf_speed_test_con -v /home/joe/github/research/tf_speed_test/:/home/joe/github/research/tf_speed_test/ tf_speed_test
